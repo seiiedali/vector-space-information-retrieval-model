@@ -14,6 +14,7 @@ def remove_punctuation(s):
 
 
 indexTable = dict()
+allFiles = dict()
 for root, dirs, files in os.walk("./Docs/"):
     for filename in files:
         path = "./Docs/" + filename
@@ -33,9 +34,9 @@ for root, dirs, files in os.walk("./Docs/"):
                     indexTable[word] += 1
                 else:
                     indexTable[word] = 1
+
 tfIdf = dict()
-for filename in :
-    # print(filename)
+for filename in allFiles:
     tfIdf[filename] = dict()
     for word in allFiles[filename]:
         tfIdf[filename][word] = allFiles[filename][word] * \
